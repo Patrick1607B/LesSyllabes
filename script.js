@@ -20,6 +20,7 @@ for (let i = 0; i < clavier.length; i++) {
 for (let i = 0; i < flag.length; i++) {
   flag[i].addEventListener("click", function (e) {
     langue = e.target.dataset.key;
+    // console.log(langue);
     let msg = new SpeechSynthesisUtterance();
     msg.lang = langue;
     console.log(msg.lang);
@@ -30,6 +31,9 @@ for (let i = 0; i < flag.length; i++) {
     });
     flag[i].classList.add("flag1");
   });
+  if (langue == en) {
+    console.log("englais");
+  }
 }
 //  lien vers les langues possible https://stackoverflow.com/questions/63019712/add-language-to-web-speech-api
 // supprime dernier caractere entée
