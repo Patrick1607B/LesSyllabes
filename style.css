@@ -4,19 +4,22 @@
     --color3: rgb(5, 255, 161);
     --color4: rgb(185, 103, 255);
     --color5: rgb(255, 251, 150);
+
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 body {
     height: 100vh;
     font-family: "Courier New", Courier, monospace;
     overflow: hidden;
-    background-color: var(--color4);
+    background-image: url(./assets/img/fr-bg.jpg);
+    background-size: cover;
 }
 
 header {
@@ -24,7 +27,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--color1);
+    background: var(--color4);
     color: var(--color3);
     font-family: cursive;
     font-weight: bolder;
@@ -139,6 +142,12 @@ main {
 }
 
 @media (max-width: 640px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+    }
 
     /* CSS mobile */
     header {
@@ -146,7 +155,7 @@ main {
         display: flex;
         align-items: center;
         justify-content: center;
-        background: var(--color1);
+        background: var(--color4);
         color: var(--color3);
         font-family: cursive;
         font-weight: bolder;

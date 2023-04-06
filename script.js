@@ -4,6 +4,44 @@ const view = document.querySelector(".view");
 const del = document.querySelector("#delete");
 const flag1 = document.querySelector(".flag");
 const sup = document.querySelector("#sup");
+
+let langueData = [
+  {
+    name: "fr",
+    color: "blue",
+    img: "fr-bg.jpg",
+  },
+  {
+    name: "de",
+    color: "red",
+    img: "de-bg.jpg",
+  },
+  {
+    name: "pt",
+    color: "yellow",
+    img: "pt-bg.jpg",
+  },
+  {
+    name: "es",
+    color: "red",
+    img: "sp-bg.jpg",
+  },
+  {
+    name: "en",
+    color: "pink",
+    img: "en-bg.jpg",
+  },
+  {
+    name: "it-IT",
+    color: "black",
+    img: "it-bg.jpg",
+  },
+  {
+    name: "ja-JP",
+    color: "green",
+    img: "jp-bg.jpg",
+  },
+];
 let langue = "";
 //remise a zero ecran
 del.addEventListener("click", function (e) {
@@ -20,6 +58,17 @@ for (let i = 0; i < clavier.length; i++) {
 for (let i = 0; i < flag.length; i++) {
   flag[i].addEventListener("click", function (e) {
     langue = e.target.dataset.key;
+    const langueGet = langueData.find((x) => x.name == langue);
+    console.log(langueGet);
+
+    // if (langueGet.color) {
+    //   document.body.style.backgroundColor = langueGet.color;
+
+    // }
+
+    if (langueGet.img) {
+      document.body.style.backgroundImage = `url("/assets/img/${langueGet.img}")`;
+    }
     // console.log(langue);
     let msg = new SpeechSynthesisUtterance();
     msg.lang = langue;
@@ -31,9 +80,6 @@ for (let i = 0; i < flag.length; i++) {
     });
     flag[i].classList.add("flag1");
   });
-  if (langue == en) {
-    console.log("englais");
-  }
 }
 //  lien vers les langues possible https://stackoverflow.com/questions/63019712/add-language-to-web-speech-api
 // supprime dernier caractere entée
