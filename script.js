@@ -61,15 +61,10 @@ for (let i = 0; i < flag.length; i++) {
     const langueGet = langueData.find((x) => x.name == langue);
     console.log(langueGet);
 
-    // if (langueGet.color) {
-    //   document.body.style.backgroundColor = langueGet.color;
-
-    // }
-
     if (langueGet.img) {
       document.body.style.backgroundImage = `url("/assets/img/${langueGet.img}")`;
     }
-    // console.log(langue);
+
     let msg = new SpeechSynthesisUtterance();
     msg.lang = langue;
     console.log(msg.lang);
@@ -87,7 +82,6 @@ sup.addEventListener("click", function (e) {
   let efface = ecran.textContent;
   efface = efface.substring(0, efface.length - 1);
   ecran.textContent = efface.toUpperCase();
-  // console.log(ecran.textContent);
 });
 
 const ajouterLettre = (lettre) => {
