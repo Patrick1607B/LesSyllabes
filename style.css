@@ -167,7 +167,7 @@ main {
         height: 90%;
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: center;
         flex-direction: column;
     }
 
@@ -184,7 +184,8 @@ main {
         font-family: cursive;
         font-weight: bolder;
         padding: 3%;
-        margin-top: 2%;
+        margin-top: 1%;
+        margin-bottom: 1%;
         transition: 0.5s;
         text-overflow: ellipsis;
     }
@@ -210,7 +211,7 @@ main {
         background-color: var(--color3);
         width: 80%;
         height: 50%;
-        border-radius: 5%;
+        border-radius: 2%;
         flex-flow: wrap;
         /* margin: 5%; */
     }
@@ -248,7 +249,7 @@ main {
     #flag_div {
         display: flex;
         flex-direction: row;
-        width: 70%;
+        width: 90%;
         justify-content: center;
         align-items: center;
         margin: 0;
