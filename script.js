@@ -29,7 +29,7 @@ let langueData = [
   {
     name: "en",
     color: "pink",
-    img: "/patrick1607b.github.io/assets/img/en-bg.jpg 404",
+    img: "https://patrick1607b.github.io/assets/img/en-bg.jpg",
   },
   {
     name: "it-IT",
