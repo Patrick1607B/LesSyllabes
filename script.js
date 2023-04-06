@@ -59,7 +59,7 @@ for (let i = 0; i < flag.length; i++) {
   flag[i].addEventListener("click", function (e) {
     langue = e.target.dataset.key;
     const langueGet = langueData.find((x) => x.name == langue);
-    console.log(langueGet);
+    // console.log(langueGet);
 
     if (langueGet.img) {
       document.body.style.backgroundImage = `url("/assets/img/${langueGet.img}")`;
