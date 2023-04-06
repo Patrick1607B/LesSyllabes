@@ -161,6 +161,7 @@ main {
         font-weight: bolder;
         font-size: 1.5em;
         width: 100%;
+        margin: 0;
     }
 
     main {
@@ -184,10 +185,10 @@ main {
         font-family: cursive;
         font-weight: bolder;
         padding: 3%;
-        margin-top: 1%;
+        margin-top: 0;
         margin-bottom: 1%;
         transition: 0.5s;
-        text-overflow: ellipsis;
+        /* text-overflow: ellipsis; */
     }
 
     .view1 {
@@ -210,7 +211,7 @@ main {
         justify-content: center;
         background-color: var(--color3);
         width: 80%;
-        height: 50%;
+        height: 45%;
         border-radius: 2%;
         flex-flow: wrap;
         /* margin: 5%; */
@@ -258,18 +259,17 @@ main {
     }
 
     .flag {
-        height: 50px;
-        width: 65px;
+        height: 45px;
+        width: 60px;
         margin: 2%;
         border: thick outset var(--color4);
-        box-shadow: 3px 3px 3px var(--color3);
     }
 
     .flag1 {
-        height: 55px;
-        width: 67px;
+        height: 46px;
+        width: 62px;
         border: thick outset var(--color5);
-        box-shadow: 6px 5px 5px var(--color2);
+
     }
 
 
