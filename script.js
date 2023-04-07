@@ -69,7 +69,7 @@ for (let i = 0; i < flag.length; i++) {
 
     let msg = new SpeechSynthesisUtterance();
     msg.lang = langue;
-    console.log(msg.lang);
+    // console.log(msg.lang);
     msg.text = ecran.textContent.toLowerCase();
     window.speechSynthesis.speak(msg);
     [...flag].forEach((element) => {
