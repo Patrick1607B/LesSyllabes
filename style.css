@@ -143,6 +143,8 @@ main {
 
 /* -------------------------------------------------------------------------------------------- */
 @media (max-width: 768px) {
+
+    /* CSS mobile */
     * {
         margin: 0;
         padding: 0;
@@ -150,7 +152,14 @@ main {
         text-decoration: none;
     }
 
-    /* CSS mobile */
+    body {
+        height: 100vh;
+        font-family: "Courier New", Courier, monospace;
+        overflow: hidden;
+        background-image: url(./assets/img/fr-bg.jpg);
+        background-size: cover;
+    }
+
     header {
         height: 10%;
         display: flex;
