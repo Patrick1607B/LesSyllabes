@@ -26,11 +26,11 @@ let langueData = [
     color: "red",
     img: "sp-bg.jpg",
   },
-  // {
-  //   name: "en",
-  //   color: "pink",
-  //   img: url("/assets/img/${langueGet.img}"),
-  // },
+  {
+    name: "en",
+    color: "pink",
+    img: url("./assets/img/${langueGet.img}"),
+  },
   {
     name: "it-IT",
     color: "black",
