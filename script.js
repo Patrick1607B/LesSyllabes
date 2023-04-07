@@ -29,7 +29,7 @@ let langueData = [
   {
     name: "en",
     color: "pink",
-    img: 'url("./assets/img/en-bg.jpg")',
+    img: "en-bg.jpg",
   },
   {
     name: "it-IT",
@@ -63,7 +63,8 @@ for (let i = 0; i < flag.length; i++) {
     // console.log(langueGet);
 
     if (langueGet.img) {
-      document.body.style.backgroundImage = `url("/assets/img/${langueGet.img}")`;
+      document.body.style.backgroundImage = `url("./assets/img/${langueGet.img}")`;
+      // `url("/assets/img/${langueGet.img}")`;
     }
 
     let msg = new SpeechSynthesisUtterance();
