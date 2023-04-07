@@ -29,7 +29,7 @@ let langueData = [
   {
     name: "en",
     color: "pink",
-    img: url("/assets/img/${langueGet.img}");
+    img: url("/assets/img/${langueGet.img}"),
   },
   {
     name: "it-IT",
