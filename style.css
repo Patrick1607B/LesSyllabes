@@ -142,7 +142,7 @@ main {
 }
 
 /* -------------------------------------------------------------------------------------------- */
-@media (max-width: 768px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 
     /* CSS mobile */
     * {
@@ -277,6 +277,65 @@ main {
 
     .flag1 {
         height: 46px;
+        width: 62px;
+        border: thick outset var(--color5);
+
+    }
+
+}
+
+@media only screen and (min-device-width : 600px) and (max-device-width : 1140px) {
+
+    .touche {
+        height: 16%;
+        width: 5%;
+        background-color: var(--color4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 2%;
+        font-size: 2vw;
+        font-weight: bold;
+        border-radius: 50%;
+        color: var(--color5);
+    }
+
+    .toucheEspace {
+        height: 15%;
+        width: 30%;
+        background-color: var(--color4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 2%;
+        font-size: 5vw;
+        font-weight: bold;
+        border-radius: 20%;
+        color: var(--color5);
+    }
+
+    #flag_div {
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        flex-wrap: wrap;
+    }
+
+    .flag {
+        height: 55px;
+        width: 65px;
+        margin: 2%;
+        border: thick outset var(--color4);
+    }
+
+    .flag1 {
+        height: 50px;
         width: 62px;
         border: thick outset var(--color5);
 
