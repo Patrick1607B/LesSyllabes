@@ -4,6 +4,8 @@ const view = document.querySelector(".view");
 const del = document.querySelector("#delete");
 const flag1 = document.querySelector(".flag");
 const sup = document.querySelector("#sup");
+const imgCountry = document.getElementById("imgCountry");
+const maxLgt = 10;
 
 let langueData = [
   {
@@ -51,8 +53,12 @@ del.addEventListener("click", function (e) {
 //recuperation du clavier virtuel plus fonction voice
 for (let i = 0; i < clavier.length; i++) {
   clavier[i].addEventListener("click", function (e) {
-    const valeur = e.target.dataset.key;
-    ajouterLettre(valeur);
+    if (ecran.textContent.length >= maxLgt) {
+      return;
+    } else {
+      const valeur = e.target.dataset.key;
+      ajouterLettre(valeur);
+    }
   });
 }
 //changement de langue
@@ -63,7 +69,7 @@ for (let i = 0; i < flag.length; i++) {
     // console.log(langueGet);
 
     if (langueGet.img) {
-      document.body.style.backgroundImage = `url("./assets/img/${langueGet.img}")`;
+      imgCountry.style.backgroundImage = `url("./assets/img/${langueGet.img}")`;
       // `url("/assets/img/${langueGet.img}")`;
     }
 
@@ -78,6 +84,7 @@ for (let i = 0; i < flag.length; i++) {
     flag[i].classList.add("flag1");
   });
 }
+
 //  lien vers les langues possible https://stackoverflow.com/questions/63019712/add-language-to-web-speech-api
 // supprime dernier caractere entée
 sup.addEventListener("click", function (e) {
@@ -169,15 +176,19 @@ const tbDuClavier = [
 ];
 
 document.addEventListener("keydown", (e) => {
-  const valeur = e.key;
-  if (tbDuClavier.includes(valeur)) {
-    ajouterLettre(valeur);
-    console.log(valeur, "valeur");
+  if (ecran.textContent.length >= maxLgt) {
+    return;
   } else {
-    alert(
-      'La touche " ' +
-        valeur +
-        " \" n'est pas une touche valide. Veuillez saisir seulement des touches de l'alphabet. "
-    );
+    const valeur = e.key;
+    if (tbDuClavier.includes(valeur)) {
+      ajouterLettre(valeur);
+      console.log(valeur, "valeur");
+    } else {
+      alert(
+        'La touche " ' +
+          valeur +
+          " \" n'est pas une touche valide. Veuillez saisir seulement des touches de l'alphabet. "
+      );
+    }
   }
 });

@@ -1,17 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <meta name="description" content="Apprenez les syllabes en jouant avec ce clavier interactif multilingue pour enfants. Écoutez, tapez et visualisez les lettres. Disponible en plusieurs langues." />
+    <meta name="keywords" content="syllabes, apprentissage, enfants, langues, jeu éducatif, alphabet, clavier interactif" />
+    <meta name="author" content="BARBOSA Patrick" />
+    
     <link rel="stylesheet" href="style.css" />
-    <title>APPRENDRE LES SYLLABES</title>
+    <title>Apprendre les syllabes – Jeu éducatif multilingue pour enfants</title>
   </head>
   <body>
     <header>APPRENDRE LES SYLLABES</header>
     <main>
-      <div id="ecran" class="view" maxlength="8"></div>
+      <section class="zone-haute">
+        <div id="ecran" class="view" maxlength="8"></div>
+        <div id="imgCountry" class="photo-encart">
+          <!-- JS ajoutera une image ici -->
+        </div>
+      </section>
+
       <div id="clavier">
+        <!-- Clavier inchangé -->
         <div id="a" data-key="a" class="touche">A</div>
         <div id="b" data-key="b" class="touche">B</div>
         <div id="c" data-key="c" class="touche">C</div>
@@ -39,59 +51,19 @@
         <div id="y" data-key="y" class="touche">Y</div>
         <div id="z" data-key="z" class="touche">Z</div>
         <div id="sup" data-key="" class="touche">←</div>
-        <div id=" " data-key=" " class="toucheEspace"></div>
+        <div id=" " data-key=" " class="toucheEspace">ESPACE</div>
         <div id="delete" data-key="" class="touche">🗑️</div>
       </div>
+
       <div id="flag_div">
-        <img
-          class="flag"
-          id="fr"
-          data-key="fr"
-          src="./assets/img/France.jpg"
-          alt="drapeau francais"
-        />
-        <img
-          class="flag"
-          id="ger"
-          data-key="de"
-          src="./assets/img/Germany.jpg"
-          alt="drapeau allemand"
-        />
-        <img
-          class="flag"
-          id="por"
-          data-key="pt"
-          src="./assets/img/Portugal.jpg"
-          alt="drapeau Portugal"
-        />
-        <img
-          class="flag"
-          id="sp"
-          data-key="es"
-          src="./assets/img/Spain.jpg"
-          alt="drapeau espagne"
-        />
-        <img
-          class="flag"
-          id="uk"
-          data-key="en"
-          src="./assets/img/United_Kingdom.jpg"
-          alt="drapeau royaume unie"
-        />
-        <img
-          class="flag"
-          id="ita"
-          data-key="it-IT"
-          src="./assets/img/italie.jpg"
-          alt="drapeau italien"
-        />
-        <img
-          class="flag"
-          id="jap"
-          data-key="ja-JP"
-          src="./assets/img/Japan.png"
-          alt="drapeau japonnais"
-        />
+        <!-- Drapeaux inchangés -->
+        <img class="flag" id="fr" data-key="fr" src="./assets/img/France.jpg" alt="drapeau francais" />
+        <img class="flag" id="ger" data-key="de" src="./assets/img/Germany.jpg" alt="drapeau allemand" />
+        <img class="flag" id="por" data-key="pt" src="./assets/img/Portugal.jpg" alt="drapeau Portugal" />
+        <img class="flag" id="sp" data-key="es" src="./assets/img/Spain.jpg" alt="drapeau espagne" />
+        <img class="flag" id="uk" data-key="en" src="./assets/img/United_Kingdom.jpg" alt="drapeau royaume unie" />
+        <img class="flag" id="ita" data-key="it-IT" src="./assets/img/italie.jpg" alt="drapeau italien" />
+        <img class="flag" id="jap" data-key="ja-JP" src="./assets/img/Japan.png" alt="drapeau japonnais" />
       </div>
     </main>
     <script src="script.js"></script>
